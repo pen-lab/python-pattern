@@ -6,6 +6,11 @@ install:
   - pip install poetry
   - poetry install
 # command to run tests
-script: poetry run pytest
+jobs:
+  include:
+    - stage: Tests
+      script: poetry run pytest
+    - stage: Flake8
+      script: poetry run flake8
 after_success:
   - bash <(curl -s https://codecov.io/bash)
