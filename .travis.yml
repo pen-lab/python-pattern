@@ -12,5 +12,7 @@ jobs:
       script: poetry run pytest
     - stage: Flake8
       script: poetry run flake8
+    - stage: mypy
+      script: poetry run mypy
 after_success:
   - bash <(curl -s https://codecov.io/bash)
