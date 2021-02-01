@@ -45,4 +45,5 @@ def test_register(statistics_display: StatisticDisplay, weather_data: WeatherDat
 
     assert statistics_display.display() == 'Max: 10'
 
+
 # TODO: удаление элемента, добавление нескольких, нагрузка, добавление одинаковых, типизация
